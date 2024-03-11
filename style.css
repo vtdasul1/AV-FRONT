@@ -8,6 +8,22 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
+
+/*criação de variaveis no root do css */
+:root{
+    --blue: #00008b;
+    --gray:#555555;
+    --skyblue:#00bfff;
+    --silver:#c0c0c0;
+    --red:#ff0000;
+    --white:#ffffff;
+    --darckgray:#959595;
+
+}
+
 /*header*/
 .main-header{
     /*Adiciona imagem no fundo*/
@@ -40,11 +56,10 @@
 }
 
 .nav-item{
-    /*remove as bolinhas padrao dos elementos li*/
-    list-style-type:none;
+    
     /*deixar todas as letras em maiusculos*/
     text-transform: uppercase;
-    color: #00008D;
+    color: var(--blue)
 
 }
 
@@ -100,4 +115,61 @@ padding: 40px 0 64px;
     width: 200px; /*Largura*/
     height: auto; /*evita a distoção da imagem*/
     
+}
+
+.about-description{
+    /*ultiliza a variavel de criado no root*/
+    color: var(--gray);
+    /*justifica o texto*/
+    text-align: justify;
+}
+
+ /*footer*/
+
+ .main-footer{
+    /*aplicar cor no fundo do rodape*/
+    background-color: var(--skyblue);
+    /*aplica espaçamento cima;baixo e nada na esquerda/direita*/
+    padding: 15px 0;
+
+ }
+
+ .main-footer-container{
+    /*deixar tudo na mesma linha*/
+    display: flex;
+    /*alinha todos os elementos*/
+    align-items: center;
+    /*colar nome de um lado e lista de icones do outro*/
+    justify-content: space-between;
+ }
+
+.title-smaller{
+    /*pegar a fonte importada*/
+    font-family: "Raleway", sans-serif;
+    /*aplica cor com a variavel criada no root*/
+    color: var(--blue);
+    /*aumenta o tamanho da fonte*/
+    font-size: 26px;
+}
+
+.list-container{
+    /*deixar o elemento na mesma linha*/
+    display: flex;
+    /*alinha todos os elementos*/
+    align-items: center;
+    /*colar nome de um lado e a lista de icones do outro*/
+    justify-content: space-between;
+}
+
+.footer-item{
+    width: 50px;
+    height: 50px;
+    /*aplica espaçamento 15px cima/baixo e nada esquerda/direita */
+    padding: 15px 0;
+
+}
+
+.footer-item + .footer-item{
+    /*aplica na mesma class seguindo em diante, ate cegar em um elemento*/
+    margin-left: 16px;
 }
