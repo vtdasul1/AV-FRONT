@@ -21,107 +21,113 @@
     <!--Area Do Site-->
     <body>
         <!--Cabeçalho-->
-        <header>
+        <header class="main-header">
             <!--Navegação-->
-            <nav>
+            <nav class="main-nav container">
                 <!--Lista não Ordenada-->
-                <ul>
+                <ul class="header-list-container">
                     <!--Item da Lista-->
-                    <li>
+                    <li class="nav-item">
+
                         <!-- <a> ancora -->
                         <a href="index.html">
+
                             <!--<img> trazer imagem-->
                             <img src="images/logo.png" alt="logo" height="100px" height="100px">
                         
                         </a>
                     </li>
 
-                    <li>
+                    <li class="nav-item">
                         <a href="loja.html">Loja</a>    
                     </li>
                         
-                    <li>
+                    <li class="nav-item">
                         <a href="Contato.html">Contato</a> 
                     </li>
 
-                    <li>
+                    <li class="nav-item">
                         <a href="Sobre.html">Sobre</a> 
                     </li>
 
 
                 </ul>
 
-
             </nav>
+            <hr>
+        </header>
 
-
-        </header> 
         <main>
-            <h2>Contato</h2>
-            <p>Os campos com * são de preenchimento obrigatorio!</p>
+            <h2 class="title-median">Contato</h2>
+            <p class="contact-text">Os campos com * são de preenchimento obrigatorio!</p>
 
             <!--Campo do formulario-->
-            <form>
+            <form class="contact">
 
                 <!--Campos dos formularios-->
-                <label>
+                <label class="contact-label">
                     Nome*
-                    <input type="texto" required>
+                    <input class="contact-field" type="texto" required>
                 </label>
 
-                <label>
-                    email*
-                    <input type="email" required>
+                <label class="contact-label">
+                    Email*
+                    <input class="contact-field" type="email" required>
                 </label>
 
-                <label>
+                <label class="contact-label">
                     Assunto*
-                    <select>
+                    <select class="contact-field">
+                        <option>Newsletter</option>
                         <option>Dúvidas</option>
                         <option>Sugestões</option>
                         <option>Críticas</option>
                     </select>
                 </label>
 
-                <label>
+                <label class="contact-label">
                     Mensagem*
-                    <textarea required></textarea>
+                    <textarea class="contact-field" required></textarea>
                 </label>
 
-                <button type="button">Enviar</button>
+                <button class="button-form" type="button">Enviar</button>
             </form>
 
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4329.220037990586!2d-46.63509482392268!3d-23.543618860942097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ff663d3d07%3A0x26afc2d8c04e9337!2sR.%20Vinte%20e%20Cinco%20de%20Mar%C3%A7o%20-%20Se%2C%20S%C3%A3o%20Paulo%20-%20SP!5e1!3m2!1spt-BR!2sbr!4v1709729830034!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4329.220037990586!2d-46.63509482392268!3d-23.543618860942097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ff663d3d07%3A0x26afc2d8c04e9337!2sR.%20Vinte%20e%20Cinco%20de%20Mar%C3%A7o%20-%20Se%2C%20S%C3%A3o%20Paulo%20-%20SP!5e1!3m2!1spt-BR!2sbr!4v1709729830034!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
         </main>
         
         <!--Rodapé do Site-->
-        <footer>
-            <div>
+        <footer class="main-footer">
+
+            <div class="footer-container">
+
                 <!--titulo tres-->
-                <h3>Vendas Livres Store - Victor Emanoel 2024</h3>
+                <h3 class="title-smaller">Vendas Livres Store - Victor Emanoel 2024</h3>
+                
                 <!--lista nao ordenada-->
-                <ul>
-                    <li>
+                <ul class="footer-container">
+                    <li class="footer-item">
                         <a href="https://www.facebook.com/" target="_blank">
                             <img src="images/facebook.svg" alt="logo facebook">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="footer-item">
                         <a href="https://www.instagram.com/" target="_blank">
                             <img src="images/instagram.svg" alt="logo instagram">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="footer-item">
                         <a href="https://www.spotify.com/" target="_blank">
                             <img src="images/spotify.svg" alt="logo spotify">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="footer-item">
                         <a href="https://www.youtube.com/" target="_blank">
                             <img src="images/youtube.svg" alt="logo youtube">
                         </a>
@@ -130,7 +136,7 @@
                 </ul>
 
             </div>
-        </footer>   
+        </footer>  
 
     </body>
 </html>
