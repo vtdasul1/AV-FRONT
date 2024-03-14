@@ -24,7 +24,7 @@
 li{
     list-style: none;
 }
-body{
+body,button,input{
     /*dar fonte body, com peso regular 400 e tamanho 22px*/
     font: 400 22px "Roboto", sans-serif;
 }
@@ -32,7 +32,7 @@ body{
 /*header*/
 .main-header{
     /*Adiciona imagem no fundo*/
-    background-image: url(images/background-image.png);
+    background-image: url(background-image.png);
     /*Alinha os elementos nos eixos x e y*/
     background-position: 50% 39%;
     /*Colocar os elementos centralizado*/
@@ -257,4 +257,97 @@ textarea.contact-field{
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Index*/
+
+.title-header {
+    font-family: "Madimi One", cursive; /*Utiliar a fonte Importada, 
+    caso nao encontre pega a fonte secundaria*/
+    color: var(--blue); /*Troca a cor da fonte*/
+    font-size: 38px; /*Aumenta o tamanho da fonte*/ 
+    padding-bottom: 10px; /*Cria espaçamento em baixo*/
+ }
+ 
+ .title-large {
+    font-family: "Rock Salt", cursive; /*Utiliar a fonte Importada, 
+    caso nao encontre pega a fonte secundaria*/
+    font-size: 38px; /*Tamanho da Fonte*/
+    color: var(--blue); /*Cor da Fonte*/
+    text-align: center; /*Centraliza o texto*/
+ }
+ 
+ .description {
+    text-align: center; /**/
+    color: var(--gray);
+    padding-bottom: 10px;
+ }
+ 
+ .emphasis {
+    background-color: var(--skyblue);
+    color: var(--blue);
+    border-radius: 25px;
+ }
+ 
+ .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+ }
+
+ .product{
+    /*coloca todos na mesma linha*/
+    display: flex;
+    /*alinha em coluna um embaixo do outro*/
+    flex-direction: column;
+    /*alinha os itens ao centro*/
+    align-items: center;
+ }
+
+ .product-title{
+    /*altera o tamanho da fonte*/
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.product-image{
+    /*trava o tamanho da imagem para colocar 2 produtos por linha pq o espaço do projeto é 600px*/ 
+    width: 320px;
+    /*trava a altura da imagem*/
+    height: 220px;
+    /*aplica uma margem em baixo da imagem*/
+    margin-bottom: 20px;
+}
+
+.product-price-container{
+    /*ocupa 100% do espaço*/
+    width: 100%;
+    /*alinha os elementos na mesma linha*/
+    display: flex;
+    /*cria um espaço entra os elementos*/
+    justify-content:space-between;
+    /*alinha os itens*/
+    align-items: center;
+}
+
+.product-price{
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button-hover{
+    background-color: var(--skyblue);
+    color: var(--blue);
+    border: 2px solid var(--skyblue);
+    border-radius: 10px;
+    padding: 4px 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button-hover:hover{
+    background-color: transparent;
+
 }
