@@ -351,3 +351,18 @@ textarea.contact-field{
     background-color: transparent;
 
 }
+
+.cart-table{
+    width: 100%;
+    /* faz com que as bordas se calapsem entem elas */
+    border-collapse:collapse;
+   
+}
+.table-head-item{
+    text-align: start;
+    /*adiciona a linha da borda em baixo*/
+    border-bottom: 1px solid var(--darckgray);
+    padding-bottom: 6px;
+    /*ytranforma o texto em maiusculo*/
+    text-transform: uppercase;
+}
