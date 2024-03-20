@@ -1,335 +1,335 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
 
-/*Reset*/
+/*Criação de Variável no root do CSS*/
+:root{
+    --blue: #00008B;
+    --gray: #555555;
+    --skyblue: #00BFFF;
+    --silver: #C0C0C0;
+    --red: #ff0000;
+    --white: #ffffff;
+    --darkgray: #959595;
+}
 
+/* MOD - RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-/*criação de variaveis no root do css */
-:root{
-    --blue: #00008b;
-    --gray:#555555;
-    --skyblue:#00bfff;
-    --silver:#c0c0c0;
-    --red:#ff0000;
-    --white:#ffffff;
-    --darckgray:#959595;
-
+body,button,input{
+    /*Dar fonte a todo body, com peso regular 400 e tamanho 22, caso nao ache  a fonte importada ultiliza a fonte secundaria*/
+    font: 400 22px "Roboto", sans-serif; 
 }
+
 li{
     list-style: none;
 }
-body,button,input{
-    /*dar fonte body, com peso regular 400 e tamanho 22px*/
-    font: 400 22px "Roboto", sans-serif;
-}
+/* MOD - HEADER*/
 
-/*header*/
 .main-header{
-    /*Adiciona imagem no fundo*/
-    background-image: url(background-image.png);
-    /*Alinha os elementos nos eixos x e y*/
+    /* =Adiciona imagem no fundo do código= */
+    background-image: url(background-image.png); 
+    /* -Alinha os elementos do eixo x e y*- /
     background-position: 50% 39%;
-    /*Colocar os elementos centralizado*/
+    /* -Colocar elementos centralizado- */
     display: flex;
-    /*alinha os elementos um embaixo do outro*/
-    flex-direction: column;
-    /*centraliza os elementos*/
+    /* -alinha os elementos um embaixo do outro- */
+    flex-direction:column ;
+    /* -Alinha os elementos no centro- */
     align-items: center;
 }
-
 .main-nav{
-    /*ocupar toda area disponivel*/
+    /*Ocupar toda área dísponivel*/
     width: 100%;
-    
 }
 
 .header-list-container{
     /*Colocar os elementos na mesma linha*/
     display: flex;
-    /*adiciona espaçamento entre os intens*/
+    /*Adicionar espaçamento entre os itens*/
     justify-content: space-between;
-    /*garantir que fiquem alinhados na mesma linha*/
+    /*Garantir que os itens estejam alinhados*/
     align-items: center;
-    /*primeiro é cima e baixo, segindo é esquerda e direita*/
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
     padding: 16px 0;
 }
-
 .nav-item{
-    
-    /*deixar todas as letras em maiusculos*/
+    /*Deixa todas as letras em MAIÚSCULO*/
     text-transform: uppercase;
-    color: var(--blue)
-
+    /*Muda a cor da letra*/
+    color: #00008B;
 }
-
+hr{
+    /*Faz a linha ocupar 100% da horizontal do site*/
+    width: 100%;
+}
 .nav-item a{
-    /*remove o underline do ancora*/
+    /*remove o underline da âncora*/
     text-decoration: none;
-    /*herda a cor de elemento pai(neste caso o nav-item)*/
+    /*Herda o cor do elemento pai (neste caso é o nav-item)*/
     color: inherit;
-
+    color: var(--blue)
 }
 .nav-item:hover{
-    /*quando passar o mouse por cima trocar a cor*/
-    color: rgba(0,0,139,0.7);
-    transition: 0.20s;
+    /*Quando passamos o mouse em cima a sua cor troca / RGBA passa a cor e no final */
+    color: rgba(0,0,139, 0.7);
+    transition: 0.2s;
 }
-
-hr{
-    /*ocupar toda area disponivel*/
-    width: 100%;
-
-}
-
 .main-about{
-padding: 40px 0 64px;
-
+    /**/
+    padding: 40px 0 64px;
 }
 .container{
-    /*trava a largura maxima que definimos para o projeto*/
+    /*trava a largura máxima que definimos para o projeto*/
     max-width: 600px;
-    /*primeiro é cima e baixo, segindo é esquerda e direita*/
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
     padding: 0 16px;
-    /*nao aplica cima/baixo, o auto distribui o maximo possivel para esquerda e direita*/
-    margin: 0 auto
+    /*irá forçar a centralizar o objeto do site*/
+    margin: 0 auto;
 }
-
 .title-median{
-    /*pega fonte importada, caso ele nao encontre ten a 2° opição*/
-    font-family: "Raleway", sans-serif;
+    /*Após o uso de uma fonte seria muito bom colocar outra, se no caso o sistema não encontrar a 1° opção,haverá a 2°*/
+    font-family:  "roboto",cursive;
     /*tamanho da fonte*/
     font-size: 32px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 24px;
-
 }
-
 .about-image{
-    /*ALINHA A IMAGEM ESQUERDA E O TEXTO A DIREITA */
+    /*alinha a imagem a esquerda*/
     float: left;
-    /*0 no topo, 20 a direita, 10 baixa, 0 esquerda*/
-    margin: 0 20px 10px;
-    /*diminuir o tamnaho das imagens*/
-    width: 200px; /*Largura*/
-    height: auto; /*evita a distoção da imagem*/
-    
+    margin: 0 20px 10px 0; /*0 Topo, 20 direita ,10 baixo e 0 a esquerda*/
+    /*diminuir os tamanhos das imagens*/
+    /*largura*/
+    width: 200px;
+    /*Evita a distorção da imagem*/
+    height: auto;
 }
-
 .about-description{
-    /*ultiliza a variavel de criado no root*/
+    /*utiliza a varialvel de cor no root*/
     color: var(--gray);
-    /*justifica o texto*/
+    /*justifica o texto dexando retinho.*/
     text-align: justify;
 }
-/*footer*/
 
 .main-footer{
-    /*aplicar cor no fundo do rodape*/
+    /*Aplicar cor no fundo no rodapé*/
     background-color: var(--skyblue);
-    /*aplica espaçamento cima;baixo e nada na esquerda/direita*/
+    /*cria um espaçamento no seu objeto do footer*/
+    /*Primeiro cima baixo,depois a esq e dir*/
     padding: 15px 0;
-
 }
-
- .footer-container{
-    /*deixar tudo na mesma linha*/
+.main-footer-container{
+    /*Deixa o elemento flexível*/
     display: flex;
-    /*alinha todos os elementos*/
+    /*Alinha os itens no centro do Elemento*/
     align-items: center;
-    /*colar nome de um lado e lista de icones do outro*/
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
     justify-content: space-between;
 }
-
 .title-smaller{
-    /*pegar a fonte importada*/
+    /*Muda a fonte do seu site*/
     font-family: "Raleway", sans-serif;
-    /*aplica cor com a variavel criada no root*/
-    color: var(--blue);
-    /*aumenta o tamanho da fonte*/
-    font-size: 26px;
+    /*Aplica a cor nas letras usando a variável*/
+    color: var(--blue); 
+    /*Aumenta o tamanho da fonte*/
+    font-size: 26px;/
 }
-
+.list-container{
+    /*Abre a disponibilidade de espaço no site*/
+    display: flex;
+    /*Alinha os objetos no centro*/
+    align-items: center;
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
+    justify-content: space-between;
+}
 .footer-item{
     width: 50px;
     height: 50px;
-    /*aplica espaçamento 15px cima/baixo e nada esquerda/direita */
     padding: 15px 0;
-
 }
-
 .footer-item + .footer-item{
-    /*aplica na mesma class seguindo em diante, ate cegar em um elemento*/
+    /*Aplicana mesma class seguindo a diante, ate chegar em um elemento*/
     margin-left: 16px;
-}  
-/*contato*/
-.contact-text{
-    /*centraliza o texto*/
-    text-align: center;
-    /*separa o paragrafo do formulario*/
+}
+.contact-text {
+    /*Alinhha o texto*/
+    text-align: center; 
+     /*Separa o paragrafo do formulário*/
     margin-bottom: 30px;
-    /*altera o tamanho da fonte*/
-    font-size: 28px;
-    color: var(--gray);
+    /* Altera o tamanho da fonte*/
+    font-size: 28px; 
+    /*altera a cor do texto*/
+    color: var(--gray); 
 }
+
 .contact{
-    /*alteta a cor do fundo do formulario*/
-    background-color:  var(--skyblue);
-    /*cria o espaçamento*/
-    padding: 30px;
-    /*tamanho definido para o projeto*/
-    max-width: 600px;
-    /*empurra para direita*/
-    margin-left: auto;
-    /*empurra para esquerda*/
-    margin-right: auto;
-    /*espaçamento para baixo*/
-    margin-bottom: 20px;
+    /* cor do fundo do formulario*/
+    background-color: var(--skyblue); 
+    /*espaçamento*/
+    padding: 30px; 
+    /*tamanho frfinifo para o projeto*/
+    max-width: 600px; 
+    /*empura para direita*/
+    margin-right: auto; 
+    /*empura para esquerda*/
+    margin-left: auto; 
+    /*espaçamento  para baixo*/
+    margin-bottom: 20px; 
 }
+
 .contact-label{
-    /*coloca os elementos um em cima do outro*/
+     /*coloca os elementos um em cima do outro*/
     display: block;
-    /*cria um espaçamento para baixo*/
-    margin-bottom: 20px;
+    /*espaçamento  para baixo*/
+    margin-bottom: 20px; 
+     /*altera a cor do texto*/
     color: var(--blue);
-
 }
-.contact-field{
+
+.contact-field {
     /*coloca os elementos um em cima do outro*/
-    display: block;
-    /*ocupa 100% do espaço*/
-    width: 100%;
-    /*aumenta a altura do campo*/
-    height: 30px;
-    /*altera o tamanho da fonte*/
-    font-size: 16px;
-    /*empurra o elemento dentro do campo para esquerda*/
-    padding-left: 10px;
-    /*remove a borda*/
-    border: none;
-}
-.contact-field:focus{ /*troca a cor do fundo da area do formulario ao clicar*/
-    /*cor do fundo*/
-    background-color: var(--silver);
-    /*remove a linha interna do campo do formulario*/
-    outline:none;
-}
-textarea.contact-field{
-    /*altera a altura do campo*/
-    height: 150px;
-    /*dar espaçamento em todo o campo*/
-    padding: 10px;
-    font-family:"Roboto" Calibre;
+    display:block; 
+    /*ocupa o mespaço maximo disponivel*/
+    width: 100%; 
+    /* aumenta a altura do campo*/
+    height: 30px; 
+    /* Altera o tamanho da fonte*/
+    font-size: 16px; 
+    /* empurra o elemento de dento do campo para a esquerda*/
+    padding-left: 10px; 
+    /*Remove a borda*/
+    border: none; 
 }
 
-.button-form{
-    /*muda a cor do fundo do botão*/
-    background-color: var(--blue);
-    /*cor do botão*/
-    color: var(--white);
-    /*adiciona a borda no botão*/
+/*Troca a cor do fundo da area do formulário ao clicar*/
+.contact-field:focus { 
+    /* cor do fundo */
+    background-color: var(--silver); 
+    /*remove a linha interna do campo do formulário*/
+    outline: none; 
+}
+
+textarea.contact-field {
+    /* aumenta a altura do campo*/
+    height: 150px; 
+    /*espaçamento em todas as direçoes*/
+    padding: 10px; 
+    /* Utiliza fonte importada, caso caso ele não encontre ultiliza a secundaria*/
+    font-family: "Roboto", calibri; 
+}
+
+.button-form {
+    /*cor do fundo do botão*/
+    background-color: var(--blue); 
+    /*cor da fonte  botão*/
+    color: var(--white); 
+     /* Adiciona borda ao botão*/
     border: 2px solid var(--blue);
-    /*arredonda as bordas do botão*/
-    border-radius: 10px;
-    /*aumenta o botão 2 para cima/baixo e 6 para esquerda/direita*/
-    padding: 2px 6px;
-    /*aumenta o peso da fonte,deixa ela mais espeça*/
-    font-weight: bold;
-    /**/
-    cursor: pointer;
+    /* Arredonda as bordas do botão*/
+    border-radius: 10px; 
+    /* aumenta o botão 2 para cima/baixo e 6 esquerda/direita*/
+    padding: 2px 6px; 
+    /* aumenta o peso da fonte, deixa ela mais espeça*/
+    font-weight: bold; 
+    /*modifica o cursor*/
+    cursor: pointer; 
 }
 
-.button-form:hover{
-    /*muda a cor do fundo do botão*/
-    background-color: var(--white);
-    /*cor do botão*/
-    color: var(--blue);
+.button-form:hover {
+    /*cor do fundo do botão*/
+    background-color: var(--white); 
+    /*cor da fonte  botão*/
+    color: var(--blue); 
 }
 
-.contact-maps{
+.contact-maps {
     width: 600px;
-    padding-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    /*empura para direita*/
+    margin-right:auto; 
+    /*empura para esquerda*/
+    margin-left: auto; 
+    /*empurra o mapa para baixo*/
+    padding-bottom: 20px;  
 }
 
-/* Index*/
-
-.title-header {
-    font-family: "Madimi One", cursive; /*Utiliar a fonte Importada, 
-    caso nao encontre pega a fonte secundaria*/
-    color: var(--blue); /*Troca a cor da fonte*/
-    font-size: 38px; /*Aumenta o tamanho da fonte*/ 
-    padding-bottom: 10px; /*Cria espaçamento em baixo*/
- }
- 
- .title-large {
-    font-family: "Rock Salt", cursive; /*Utiliar a fonte Importada, 
-    caso nao encontre pega a fonte secundaria*/
-    font-size: 38px; /*Tamanho da Fonte*/
-    color: var(--blue); /*Cor da Fonte*/
-    text-align: center; /*Centraliza o texto*/
- }
- 
- .description {
-    text-align: center; /**/
-    color: var(--gray);
+/*Index*/
+.title-header{
+    /*Utilizar fonte importada do google fonts*/
+    font-family: "Madimi One" , cursive;
+    /*Coloração da letra*/
+    color: var(--blue); 
+    /*Tamanho da fonte*/
+    font-size: 38px; 
+    /*Espaçamento inferior*/
     padding-bottom: 10px;
- }
- 
- .emphasis {
-    background-color: var(--skyblue);
+}
+.title-larger{
+    /*utiliza a fonte importada do google fonts*/
+    font-family: "Rock Salt", cursive;
+    /*Altera o tamanho das letras*/
+    font-size: 38px;
+    /*coloração das letras Utilizando Variável*/
     color: var(--blue);
+    /*Centraliza as Palavras no Centro do espaço do elemento*/
+    text-align: center;
+}
+.description{
+    /*Centraliza os Textos*/
+    text-align: center;
+    /*Cor da Letra*/
+    color: var(--gray);
+    /*Cria um Espaçamento Abaixo do Texto*/
+    padding-bottom: 10px;
+}
+.emphasis{
+    /*Altera a Cor do Fundo*/
+    background-color: var(--skyblue);
+    /*Altera a cor da letra*/
+    color: var(--blue);
+    /*Arredonda a borda*/
     border-radius: 25px;
- }
- 
- .product-container {
-    display: flex;
+}
+.product-container{
+    display:flex ;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
     padding-bottom: 30px;
- }
-
- .product{
-    /*coloca todos na mesma linha*/
+}
+.product{
+    /*Coloca todos na mesma =LINHA=*/
     display: flex;
-    /*alinha em coluna um embaixo do outro*/
+    /*aLInha os Itens em coluna*/
     flex-direction: column;
-    /*alinha os itens ao centro*/
+    /*alinhar itens no centro*/
     align-items: center;
- }
-
- .product-title{
-    /*altera o tamanho da fonte*/
+}
+.product-title{
+    /*Altera o tamanho da letra do título*/
     font-size: 20px;
+
     margin-bottom: 6px;
 }
-
 .product-image{
-    /*trava o tamanho da imagem para colocar 2 produtos por linha pq o espaço do projeto é 600px*/ 
+    /*Aumentar o tamanho a imagem para deixar proporcional ao site*/
     width: 320px;
-    /*trava a altura da imagem*/
-    height: 220px;
-    /*aplica uma margem em baixo da imagem*/
+    /*Altera a altura da imagem para deixar proporcional ao site(NÃO FICA PROPORCIONAL)*/
+    height: 320px;
+    /*Aplica um espaço abaixo da imagem*/
     margin-bottom: 20px;
 }
-
 .product-price-container{
-    /*ocupa 100% do espaço*/
+    /*Ocupar 100% do espaço*/
     width: 100%;
-    /*alinha os elementos na mesma linha*/
+    /*Deixaros elementos flexíveis*/
     display: flex;
-    /*cria um espaço entra os elementos*/
-    justify-content:space-between;
-    /*alinha os itens*/
+    /**/
+    justify-content: space-between;
     align-items: center;
+    
 }
 
 .product-price{
@@ -337,7 +337,6 @@ textarea.contact-field{
     font-weight: bold;
     font-size: 18px;
 }
-
 .button-hover{
     background-color: var(--skyblue);
     color: var(--blue);
@@ -349,20 +348,96 @@ textarea.contact-field{
 }
 .button-hover:hover{
     background-color: transparent;
-
 }
-
 .cart-table{
     width: 100%;
-    /* faz com que as bordas se calapsem entem elas */
-    border-collapse:collapse;
-   
+    border-collapse: collapse;
+    padding-bottom: 6px;
+    /*Transforma a letra em MAIÚSCULO*/
+    text-transform: uppercase;
 }
 .table-head-item{
-    text-align: start;
-    /*adiciona a linha da borda em baixo*/
-    border-bottom: 1px solid var(--darckgray);
-    padding-bottom: 6px;
-    /*ytranforma o texto em maiusculo*/
+/*Localiza as palavras no inicio do bloco*/
+text-align: start;
+/*Cria uma linha abaixo do Elemento com a variável*/
+border-bottom: 1px solid var(--darkgray); 
+/*Cria um colapso com os elementos dentro do bloco*/
+border-collapse: collapse;
+/*Dá um espaço dentro do bloco mas na parte inferior*/
+padding-bottom: 6px;
+/*Transforma a letra em MAIÚSCULO*/
+text-transform: uppercase;
+}
+.second-col, .third-col{
+    /*fazer a segunda e a terceira coluna ocuparem o mesmo tamanho*/
+    width: 25%;
+}
+.cart-product{
+    padding: 8px;
+}
+.product-identification{
+    display: flex;
+    align-items: center;
+}
+.cart-product-image{
+    width: 120px;
+    height: 80px;
+}
+.cart-product-title{
+    /*Cria um espaço na parte esquerda do elemento "TITLE"*/
+    margin-left: 15px;
+}
+.cart-product-price{
+    font-family: "Raleway", sans-serif;
+}
+.product-qnt-input{
+    width: 30px;
+    height: 35px;
+    border: 2px solid var(--blue);
+    border-radius: 6px;
+    background-color: var(--silver);
+    text-align: center;
+}
+.remove-product-button{
+    background-color: var(--red);
+    color: var(--white);
+    border-style: 0;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 5px;
+}
+.remove-product-button:hover{
+    /*Diminui o brilho com essa propriedade*/
+    filter: brightness(0.8);  
+}
+.cart-total-container{
+    border-top:1px solid var(--darkgray);
+    /*Leva pra o final do campo*/
+    text-align: end;/*Leva o texto para o final do elemento*/
+    padding: 6px 16px 0 0;
+}
+.cart-total-container strong{
+    margin-right: 10px;
+}
+.purchase-button{
+    /*Deixa o elemento flexível*/
+    display: flex;
+    padding: 16px 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
     text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    margin: 24px auto 0;
+}
+.purchase-button:hover{
+    filter: brightness(0.8);
+}
+
+@media (max-width:725px) {
+   .main-footer-container{
+      flex-direction: column;
+   }
+   
 }
