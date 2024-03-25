@@ -434,96 +434,155 @@ text-transform: uppercase;
 .purchase-button:hover{
     filter: brightness(0.8);
 }
+
+.product-description{
+   font-size: 15px;
+   color: var(--gray);
+   font-family: "Raleway", sans-serif;
+    
+}
+
 /*Responsividade*/
 
-@media (max-width:725px) {
-   .main-footer-container{
-      flex-direction: column;
-    }
-   .title-median{
-    font-size: 30px;
-    padding: 4px;
-    }
-}
+/*825px*/
 
-@media (max-width: 680px) {
-    .product-container{
-        justify-content: center;
+@media (max-width: 825px) {
+    .title-header {
+       font-size: 34px;
+       text-align: center;
     }
-    .title-median{
-        font-size: 27px;
-    }
-}
-
-@media (max-width: 600px) {
-    .title-large{
-        font-size: 36px;
-    }
-    .title-median{
-        font-size: 24px;
-    }
-    
-    
-}
-
-@media (max-width: 560px) {
-    .title-large{
-        font-size: 32px;
-    }
-    .title-median{
-        font-size: 21px;
-    }
-}
-@media (max-width:500px) {
-
-    .title-header{
-        font-size: 30px;
-    }
-    .title-median{
-        font-size: 18px;
-    }
-    .title-large{
-        font-size: 26px;
-    }
-    .title-smaller{
-        font-size: 20px;
-    }
-    
-}
-
-@media(max-width: 405px){
-    .nav-item img{
-        width: 80px;
-        height: 80px;
-    }
-
-    .header-list-container{
-        font-size: 18px;
-    }
-    .description{ 
-        font-size: 19px;
-        font-family: "Madimi One",cursive;
-    }
-    .title-median{
-        font-size: 26px;
-    }
-    .title-smaller{
-        font-size: 20px;
-    }
-    .product-container{
-        max-width: 300px;
-        margin-left: auto;
-        margin-left: auto;
-    }
-    .product-image{
-        width: 315px;
-    }
-
-}
+ }
  
-
-@media(max-width: 320px){
-    .header-list-container{
-        font-size: 17px;
+ /*725px*/
+ 
+ @media (max-width: 725px) {
+ 
+    .main-footer-container{
+       flex-direction: column;
     }
-}
+    .title-median {
+       font-size: 30px;
+       padding: 4px;
+    }
+ }
+ 
+ /*680px*/
+ @media (max-width: 680px) {
+    .product-container {
+       justify-content: center;
+    }
+    .title-median {
+       font-size: 27px;
+       
+    }
+ 
+ }
+ 
+ /*600px*/
+ @media (max-width: 600px) {
+    .title-large {
+       font-size: 36px;   
+    }
+    .title-median {
+       font-size: 24px;
+       
+    }
+ 
+ }
+ 
+ /*590px*/
+ /*carrinho*/
+ 
+ @media (max-width: 590px){
+    .product-identification {
+       flex-direction: column;
+    }
+    .product-qnt-input {
+       display: flex;
+       margin-left: 36px;
+    }
+ }
+ 
+ /*560px*/
+ @media (max-width: 560px) {
+    .title-large {
+       font-size: 32px;   
+    }
+    .title-median {
+       font-size: 21px;
+       
+    }
+ 
+ }
+ 
+ 
+ /*500*/
+ @media (max-width: 500px) {
+    .title-header {
+       font-size: 30px;
+       text-align: center;
+    }
+    .title-large {
+       font-size: 26px;   
+    }
+    .title-median {
+       font-size: 18px;   
+    }
+    .title-smaller {
+       font-size: 22px;
+    }
+ }
+ 
+ /*405px*/
+ @media (max-width: 405px) {
+    .nav-item img {
+       width: 80px;
+       height: 80px;
+    }
+ 
+    .header-list-container {
+       font-size: 18px;
+    }
+ 
+    .description {
+       font-size: 19px;
+       font-family: "Madimi One", cursive;
+    }
+ 
+    .title-median {
+       font-size: 26px;   
+    }
+    .title-smaller {
+       font-size: 17px;
+    }
+ 
+    .product-container{
+       max-width: 300px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    .product-image {
+       width: 315px;
+    }
+ }
+ 
+ @media (max-width: 375px) {
+    .about-image {
+    width: 160px;
+    }
+    .contact-text {
+       font-size: 25px;
+    }
+ }
+
+ @media (max-width: 320px){
+    .second-col, .third-col{
+        font-size: 19px;
+        text-align: left;
+
+    }
+    .table-head-item {
+        font-size: 19px;
+        text-align: left;
+    }
+ }
